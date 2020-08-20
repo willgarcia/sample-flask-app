@@ -37,6 +37,33 @@ docker pull derwentx/scanner-cli:latest  # for exercise 1
 docker pull hawkeyesec/scanner-cli:latest  # for exercise 1
 ```
 
+## Testing the Web App locally (Optional, for developing tests)
+
+create a Python virtual environment using `pyenv-virtualenv`. You can install this using Brew:
+
+```bash
+brew install pyenv-virtualenv
+```
+
+You can create a new python virtual environment using the latest stable version of Python3
+
+```bash
+LATEST_PYTHON3=$(pyenv install --list | sed  -n 's/  \(3\.[0-9]\.[0-9]\)/\1/p' | sort | tail -n 1)
+pyenv virtualenv $LATEST_PYTHON3 sample-flask-app
+```
+
+You can activate the virtual environment with
+
+```bash
+pyenv activate sample-flask-app
+```
+
+The requirements can be installed with
+
+```bash
+pip install -r web/requirements.txt
+```
+
 ## Starting the Application
 
 To see the sample app running, make sure you have docker-compose installed, then run the following command:
