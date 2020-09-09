@@ -8,5 +8,5 @@ jobs:
       options: -v /__w/sample-flask-app/sample-flask-app:/target
     steps:
     - uses: actions/checkout@v2
-    - name: What java version do we have
+    - name: Vuln scan
       run: hawkeye scan --target /target
