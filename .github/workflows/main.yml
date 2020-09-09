@@ -1,0 +1,10 @@
+name: "Hawkeye Scan"
+on: [push, pull_request]
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    container:
+      image: derwentx/scanner-cli:latest
+      options: -v /__w/sample-flask-app/sample-flask-app:/target
+    steps:
+    - uses: actions/checkout@v2
