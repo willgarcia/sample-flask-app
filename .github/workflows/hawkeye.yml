@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: derwentx/scanner-cli:latest
-      options: -v /__w/sample-flask-app/sample-flask-app:/target
+      options: -v /__w/sample-flask-app/sample-flask-app:/target --target /target
     steps:
     - uses: actions/checkout@v2
